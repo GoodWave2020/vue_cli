@@ -4,6 +4,14 @@ import LikeNumber from "./components/LikeNumber.vue";
 
 Vue.config.productionTip = false;
 Vue.component('LikeNumber', LikeNumber);
+Vue.filter('upperCase', function(value) {
+  return value.toUpperCase();
+});
+Vue.mixin({
+  created() {
+    console.log('global mixin');
+  }
+});
 //Vue.directive('border', function(el, binding) {
 //  el.style.borderWidth = binding.value.width;
 //  el.style.borderColor = binding.value.color;
